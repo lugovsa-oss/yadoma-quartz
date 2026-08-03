@@ -1,0 +1,220 @@
+# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
+
+# Starter configuration for a Russian-language personal blog.
+# Replace the TODO values before public deployment.
+configuration:
+  pageTitle: "Дома у Алекса" # TODO
+  pageTitleSuffix: ""
+  enableSPA: true
+  enablePopovers: true
+  analytics: null
+  locale: ru-RU
+  baseUrl: localhost:8080 # TODO: domain only, without https://
+  ignorePatterns:
+    - private
+    - templates
+    - .obsidian
+  theme:
+    fontOrigin: googleFonts
+    cdnCaching: true
+    typography:
+      title: Cormorant Garamond
+      header: Cormorant Garamond
+      body: Source Serif 4
+      code: IBM Plex Mono
+    colors:
+      lightMode:
+        light: "#fffefb"
+        lightgray: "#e5dfd3"
+        gray: "#aaa093"
+        darkgray: "#5d554b"
+        dark: "#332f29"
+        secondary: "#7d5a27"
+        tertiary: "#667557"
+        highlight: "rgba(125, 90, 39, 0.11)"
+        textHighlight: "#d9c78b66"
+      darkMode:
+        light: "#211f1b"
+        lightgray: "#36322c"
+        gray: "#82786b"
+        darkgray: "#d5cec2"
+        dark: "#f4efe5"
+        secondary: "#d0a45f"
+        tertiary: "#a6b496"
+        highlight: "rgba(208, 164, 95, 0.14)"
+        textHighlight: "#8b753b88"
+
+plugins:
+  - source: "@quartz-community/created-modified-date"
+    enabled: true
+    options:
+      defaultDateType: published
+      priority:
+        - frontmatter
+        - git
+        - filesystem
+    order: 10
+
+  - source: "@quartz-community/syntax-highlighting"
+    enabled: true
+    options:
+      theme:
+        light: github-light
+        dark: github-dark
+      keepBackground: false
+    order: 20
+
+  - source: "@quartz-community/obsidian-flavored-markdown"
+    enabled: true
+    options:
+      enableInHtmlEmbed: false
+      enableCheckbox: true
+    order: 30
+
+  - source: "@quartz-community/github-flavored-markdown"
+    enabled: true
+    order: 40
+
+  - source: "@quartz-community/table-of-contents"
+    enabled: true
+    order: 50
+    layout:
+      position: right
+      priority: 30
+      condition: not-index
+
+  - source: "@quartz-community/crawl-links"
+    enabled: true
+    options:
+      markdownLinkResolution: shortest
+    order: 60
+
+  - source: "@quartz-community/description"
+    enabled: true
+    order: 70
+
+  - source: "@quartz-community/latex"
+    enabled: true
+    options:
+      renderEngine: katex
+    order: 80
+
+  - source: "@quartz-community/quartz-fonts"
+    enabled: true
+
+  - source: "@quartz-community/remove-draft"
+    enabled: true
+
+  - source: "@quartz-community/alias-redirects"
+    enabled: true
+
+  - source: "@quartz-community/content-index"
+    enabled: true
+    options:
+      enableSiteMap: true
+      enableRSS: true
+
+  - source: "@quartz-community/favicon"
+    enabled: true
+
+  - source: "@quartz-community/og-image"
+    enabled: true
+
+  - source: "@quartz-community/cname"
+    enabled: true
+
+  - source: "@quartz-community/content-page"
+    enabled: true
+
+  - source: "@quartz-community/folder-page"
+    enabled: true
+
+  - source: "@quartz-community/tag-page"
+    enabled: true
+
+  # Ordinary HTML navigation generated from the content tree.
+  - source: "@quartz-community/explorer"
+    enabled: true
+    options:
+      title: "Разделы"
+      folderClickBehavior: link
+      folderDefaultState: collapsed
+      useSavedState: true
+    layout:
+      position: left
+      priority: 50
+
+  - source: "@quartz-community/search"
+    enabled: true
+    layout:
+      position: left
+      priority: 20
+      group: toolbar
+      groupOptions:
+        grow: true
+
+  - source: "@quartz-community/article-title"
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 10
+
+  - source: "@quartz-community/content-meta"
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 20
+
+  - source: "@quartz-community/tag-list"
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 30
+
+  - source: "@quartz-community/page-title"
+    enabled: true
+    layout:
+      position: left
+      priority: 10
+
+  - source: "@quartz-community/darkmode"
+    enabled: false
+
+  - source: "@quartz-community/reader-mode"
+    enabled: false
+
+  - source: "@quartz-community/breadcrumbs"
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 5
+      condition: not-index
+
+  - source: "@quartz-community/footer"
+    enabled: true
+    options:
+      links:
+        RSS: /index.xml
+    layout:
+      position: footer
+      priority: 50
+
+layout:
+  groups:
+    toolbar:
+      priority: 35
+      direction: row
+      gap: 0.5rem
+  byPageType:
+    "404":
+      positions:
+        beforeBody: []
+        left: []
+        right: []
+    content: {}
+    folder:
+      positions:
+        right: []
+    tag:
+      positions:
+        right: []

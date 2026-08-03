@@ -1,0 +1,22 @@
+{
+  "version": "0.1",
+  "target": "Quartz 5 fresh blog installation",
+  "files": [
+    "Install-Theme.ps1",
+    "README.md",
+    "content/assets/avatar.webp",
+    "content/assets/home-hero.webp",
+    "content/assets/sidebar-ink.webp",
+    "content/assets/site-preview.webp",
+    "content/books/index.md",
+    "content/index.md",
+    "content/o-sayte.md",
+    "content/ob-avtore.md",
+    "content/posts/chay-i-tishina.md",
+    "content/posts/index.md",
+    "content/posts/o-vremeni-i-vnimanii.md",
+    "install-theme.sh",
+    "quartz.config.yaml",
+    "quartz/styles/custom.scss"
+  ]
+}
