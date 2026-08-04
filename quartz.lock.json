@@ -6,6 +6,12 @@
       "resolved": "https://github.com/quartz-community/note-properties.git",
       "commit": "e68145b9f11b31d3168ed2755bd74f36a67dbed7",
       "installedAt": "2026-08-03T04:52:05.640Z"
+    },
+    "recent-notes": {
+      "source": "github:quartz-community/recent-notes",
+      "resolved": "https://github.com/quartz-community/recent-notes.git",
+      "commit": "2c36e87f151431b7fb05a486705adfa790126622",
+      "installedAt": "2026-08-04T14:59:18.732Z"
     }
   }
 }
