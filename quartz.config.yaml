@@ -2,18 +2,6 @@
 configuration:
   pageTitle: Дома у Алекса
   pageTitleSuffix: ""
-    - source: github:quartz-community/recent-notes
-    enabled: true
-    options:
-      title: "Последние записи"
-      limit: 8
-      showTags: false
-      hideTagPages: true
-      hideFolderPages: true
-      linkToMore: "posts"
-    layout:
-      position: afterBody
-      priority: 100
   enableSPA: true
   enablePopovers: true
   analytics: null
@@ -53,6 +41,18 @@ configuration:
         highlight: rgba(208, 164, 95, 0.14)
         textHighlight: "#8b753b88"
 plugins:
+  - source: github:quartz-community/recent-notes
+    enabled: true
+    options:
+      title: "Последние записи"
+      limit: 8
+      showTags: false
+      hideTagPages: true
+      hideFolderPages: true
+      linkToMore: "posts"
+    layout:
+      position: afterBody
+      priority: 100
   - source: github:quartz-community/note-properties
     enabled: true
     options:
