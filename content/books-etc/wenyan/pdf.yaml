@@ -1,0 +1,5 @@
+pdf-engine: xelatex
+mainfont: Times New Roman
+CJKmainfont: FandolSong-Regular.otf
+CJKmainfontoptions:
+  - Path=/usr/local/texlive/2026basic/texmf-dist/fonts/opentype/public/fandol/
