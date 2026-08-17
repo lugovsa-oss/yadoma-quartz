@@ -1,3 +1,7 @@
+---
+created: 2026-06-27
+---
+
 **道可道，非常道。**  
 **Dào kě dào, fēi cháng dào.**
 ![[images/daokedao.webp]]

@@ -1,4 +1,5 @@
 ---
+created: 2026-08-12
 title: знак 是 (shì)
 tags:
   - hanzi
