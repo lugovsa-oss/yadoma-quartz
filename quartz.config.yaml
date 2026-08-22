@@ -69,7 +69,7 @@ plugins:
   - source: "@quartz-community/created-modified-date"
     enabled: true
     options:
-      defaultDateType: published
+      defaultDateType: created
       priority:
         - frontmatter
         - git
